@@ -1,0 +1,9 @@
+feature,shap_importance
+thyroid_surgery,0.03316638163784909
+query_hyperthyroid,0.019355759097606878
+on_thyroxine,0.014313882010892861
+Age,0.0
+query_hypothyroid,0.0
+sick,0.0
+TT4,0.0
+FTI,0.0

@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Jaundice</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+        <style>
+            body{
+              padding: 2%;
+            }
+            .web{
+              background: #2ec194;
+              padding-left: 10%;
+              padding-right: 10%;
+            }
+            .cardio{
+              background-color: #33ccff;
+              padding-left: 10%;
+              padding-right: 10%;
+            }
+    
+            .q{
+              display: flex;
+              margin: auto;
+              width: 100%;
+              border-radius: 50px;
+            }
+            .Data{
+              padding-top: 5%;
+              padding-left: 10%;	
+            }
+            .personal{
+              float: left;
+              padding-bottom: 5%;
+            }
+            .Dis{
+              padding: 5%;
+            }
+            .symptoms{
+              padding-top: 5%;
+              padding-left: 20%;
+              
+            }
+            .next{
+              padding-top: 10%;
+            }
+    
+            .bac{
+              background-color: azure;
+              padding: 5%;
+            }
+    
+            .SYMP{
+              padding-top: 5%;
+            }
+    
+            .cen{
+              padding: 15px;
+              margin: auto;
+              width: 100%;
+              border-radius: 50px;
+              color: white;
+              box-shadow: -30px 30px 20px rgba(0,0,0,0.3);
+              text-align: center;
+              background: linear-gradient(to left, #33ccff 0%, #ff99cc 100%);
+            }
+            #right{
+              padding-top: 5%;
+              width: 35.3%;
+              float: right;
+              height: 400px;
+            }
+            #left{
+              padding-top: 5%;
+              width: 26.3%;
+              float: left;
+              height: 400px;
+            }
+            #middle{
+              padding-top: 5%;
+              height: 400px;
+              width: 33.3%;
+              display: flow-root;
+              padding-left: 8%;
+    
+            }
+      </style>
+
+    </head>
+    <body class="cardio">
+      <ul class="list-group">
+        <li class="list-group-item active" style="text-align: center;"><h1>JAUNDICE</h1></li>
+        </ul>
+        <br><br>
+        <form>
+            <h3 style="text-align: center;">Enter the Following Clinical Information:</h3>
+              <br>
+        <div id="left">
+            <div class="form-group">
+                <label for="age"><h5>AGE:</h5></label>
+                <input type="text" class="form-control" id="age" placeholder="Enter your Age">
+            </div><br><br>
+            <div class="form-group">
+                <label for="weight"><h5>TOTAL BILIRUBIN :</h5></label>
+                <input type="text" class="form-control" id="tb" placeholder="Enter your Total bilirubin">
+            </div><br><br>
+            <div class="form-group">
+                <label for="weight"><h5>ALKALINE PHOSPOPHOTASE:</h5></label>
+                <input type="text" class="form-control" id="alkp" placeholder="Enter your Alkaline Phosphotase">
+            </div>
+
+        </div>
+        <div id="right">
+           
+            <div class="form-group">
+                <label for="height"><h5>TOTAL PROTIENS:</h5></label>
+                <input type="text" class="form-control" id="totprot" placeholder="Enter your Total Protiens">
+            </div><br><br>
+              <div class="form-group">
+                <label for="dbp"><h5>ALBUMIN:</h5></label>
+                <input type="text" class="form-control" id="albmn" placeholder="Enter your Diastolic Blood Pressure">
+              </div><br><br>
+              
+        </div>
+        
+        <div id="middle">
+          <label for="sex"><h5>SEX:</h5></label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Gender:</label>
+                </div>
+                <select class="custom-select" id="sex">
+                  <option selected>Choose...</option>
+                  <option value="0">MALE</option>
+                  <option value="1">FEMALE</option>
+                  
+                </select>
+              </div><br><br>
+              <div class="form-group">
+                <label for="sbp"><h5>DIRECT BILIRUBIN :</h5></label>
+                <input type="text" class="form-control" id="db" placeholder="Enter your Direct Bilirubin">
+              </div><br><br>
+              <div class="form-group">
+                <label for="weight"><h5>ALAMINE AMINOTRANSFERASE:</h5></label>
+                <input type="text" class="form-control" id="amtrs" placeholder="Enter your Aminotransferase">
+              </div>
+            </div>
+        </div>
+        
+        <br><br>
+        
+        </form>
+
+
+        <div class="text-center">
+            <button id="severity" class="btn btn-primary">PREDICT SEVERITY</button>
+        </div>
+
+        <br>
+
+        <h6 style="text-align: center">Severity Predicted : <h6> <br>
+        <span style="color: red;margin-left: 12cm;" id="severitypredicted"></span>
+
+
+
+        <script type="text/javascript">
+
+            $(document).ready(function()
+            {
+    
+                  var csrf = $("input[name=csrfmiddlewaretoken]").val();
+    
+                  $("#severity").click(function(){
+    
+                    var age = document.getElementById("age").value;
+                    var total_bil = document.getElementById("tb").value;
+                    var alkp = document.getElementById("alkp").value;
+                    
+  
+                    var total_pro = document.getElementById("totprot").value;
+                    var albmn = document.getElementById("albmn").value;
+                    var select1 = document.getElementById("sex");
+                    var gender = select1.options[select1.selectedIndex].value;
+
+
+                    var direct_bil = document.getElementById("db").value;
+                    var amino = document.getElementById("amtrs").value;
+
+                    $.ajax({
+    
+                        url:'/jaundice_disease/',
+                        type:'POST',
+                        data: {
+                            age_val: age,
+                            total_bil_val: total_bil,
+                            alkp_val:alkp,
+                            total_pro_val:total_pro,
+                            albmn_val: albmn,
+                            gender_val:gender,
+                            direct_bil_val:direct_bil,
+                            amino_val:amino
+                        },
+                        success : function(response){
+                          document.getElementById("severitypredicted").innerHTML = response.restext;
+                        }
+                    });
+    
+                  });
+              });
+  
+             
+         
+          </script>
+              
+    
+
+    </body>
+</html>

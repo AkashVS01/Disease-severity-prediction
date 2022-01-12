@@ -1,0 +1,47 @@
+{
+    "columns": [
+        "POLYURIA",
+        "POLYDIPSIA",
+        "SUDDEN_WEIGHT_LOSS",
+        "WEAKNESS",
+        "POLYPHAGIA",
+        "VISUAL_BLURRING",
+        "ITCHING",
+        "DELAYED_HEALING",
+        "PARTIAL_PARESIS",
+        "MUSCLE_STIFFNESS"
+    ],
+    "rows": 304,
+    "cols": 10,
+    "target_is_numeric": true,
+    "columns_info": {
+        "POLYURIA": [
+            "scale"
+        ],
+        "POLYDIPSIA": [
+            "scale"
+        ],
+        "SUDDEN_WEIGHT_LOSS": [
+            "scale"
+        ],
+        "WEAKNESS": [
+            "scale"
+        ],
+        "POLYPHAGIA": [
+            "scale"
+        ],
+        "VISUAL_BLURRING": [
+            "scale"
+        ],
+        "ITCHING": [],
+        "DELAYED_HEALING": [],
+        "PARTIAL_PARESIS": [
+            "scale"
+        ],
+        "MUSCLE_STIFFNESS": []
+    },
+    "target_info": [],
+    "n_features": 10,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

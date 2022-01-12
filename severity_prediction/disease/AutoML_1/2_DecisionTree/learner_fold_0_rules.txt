@@ -1,0 +1,16 @@
+if (AP_HIGH <= 134.5) and (WEIGHT <= 83.5) and (HEIGHT <= 171.5) then class: 0 (proba: 95.58%) | based on 8,306 samples
+
+if (AP_HIGH > 134.5) and (WEIGHT > 69.5) and (WEIGHT > 75.5) then class: 1 (proba: 96.38%) | based on 5,738 samples
+
+if (AP_HIGH <= 134.5) and (WEIGHT > 83.5) and (AP_HIGH > 116.5) then class: 1 (proba: 77.19%) | based on 2,451 samples
+
+if (AP_HIGH > 134.5) and (WEIGHT > 69.5) and (WEIGHT <= 75.5) then class: 1 (proba: 75.01%) | based on 1,929 samples
+
+if (AP_HIGH > 134.5) and (WEIGHT <= 69.5) and (AP_HIGH <= 145.5) then class: 0 (proba: 83.72%) | based on 1,622 samples
+
+if (AP_HIGH > 134.5) and (WEIGHT <= 69.5) and (AP_HIGH > 145.5) then class: 1 (proba: 64.13%) | based on 1,369 samples
+
+if (AP_HIGH <= 134.5) and (WEIGHT <= 83.5) and (HEIGHT > 171.5) then class: 0 (proba: 66.19%) | based on 1,186 samples
+
+if (AP_HIGH <= 134.5) and (WEIGHT > 83.5) and (AP_HIGH <= 116.5) then class: 0 (proba: 72.61%) | based on 376 samples
+

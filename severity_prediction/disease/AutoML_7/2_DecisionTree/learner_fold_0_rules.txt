@@ -1,0 +1,8 @@
+if (thyroid_surgery <= 0.5) then class: 0 (proba: 100.0%) | based on 517 samples
+
+if (thyroid_surgery > 0.5) and (query_hyperthyroid <= 0.5) then class: 0 (proba: 100.0%) | based on 19 samples
+
+if (thyroid_surgery > 0.5) and (query_hyperthyroid > 0.5) and (on_thyroxine > 0.5) then class: 1 (proba: 100.0%) | based on 15 samples
+
+if (thyroid_surgery > 0.5) and (query_hyperthyroid > 0.5) and (on_thyroxine <= 0.5) then class: 0 (proba: 100.0%) | based on 1 samples
+

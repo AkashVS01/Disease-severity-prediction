@@ -1,0 +1,35 @@
+{
+    "columns": [
+        "Age",
+        "on_thyroxine",
+        "query_hypothyroid",
+        "query_hyperthyroid",
+        "sick",
+        "thyroid_surgery",
+        "TT4",
+        "FTI"
+    ],
+    "rows": 719,
+    "cols": 8,
+    "target_is_numeric": true,
+    "columns_info": {
+        "Age": [
+            "scale"
+        ],
+        "on_thyroxine": [],
+        "query_hypothyroid": [],
+        "query_hyperthyroid": [],
+        "sick": [],
+        "thyroid_surgery": [],
+        "TT4": [
+            "scale"
+        ],
+        "FTI": [
+            "scale"
+        ]
+    },
+    "target_info": [],
+    "n_features": 8,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

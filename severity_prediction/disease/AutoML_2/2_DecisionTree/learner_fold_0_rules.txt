@@ -1,0 +1,14 @@
+if (Alkaline_Phosphotase <= 312.0) and (Alkaline_Phosphotase <= 306.5) then class: 0 (proba: 100.0%) | based on 216 samples
+
+if (Alkaline_Phosphotase > 312.0) and (Alkaline_Phosphotase > 341.0) and (Alamine_Aminotransferase > 18.0) then class: 1 (proba: 100.0%) | based on 62 samples
+
+if (Alkaline_Phosphotase > 312.0) and (Alkaline_Phosphotase <= 341.0) and (AGE > 46.5) then class: 1 (proba: 100.0%) | based on 6 samples
+
+if (Alkaline_Phosphotase > 312.0) and (Alkaline_Phosphotase <= 341.0) and (AGE <= 46.5) then class: 0 (proba: 100.0%) | based on 5 samples
+
+if (Alkaline_Phosphotase > 312.0) and (Alkaline_Phosphotase > 341.0) and (Alamine_Aminotransferase <= 18.0) then class: 1 (proba: 66.67%) | based on 3 samples
+
+if (Alkaline_Phosphotase <= 312.0) and (Alkaline_Phosphotase > 306.5) and (Total_Bilirubin <= 5.75) then class: 0 (proba: 100.0%) | based on 3 samples
+
+if (Alkaline_Phosphotase <= 312.0) and (Alkaline_Phosphotase > 306.5) and (Total_Bilirubin > 5.75) then class: 1 (proba: 100.0%) | based on 1 samples
+

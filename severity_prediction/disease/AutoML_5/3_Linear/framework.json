@@ -1,0 +1,167 @@
+{
+    "uid": "8602a3b0-2767-40d4-b344-b912bb66c300",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        0.4330127018922193,
+                        0.4612567307064879,
+                        0.4914434051837658,
+                        0.46654381050018845,
+                        0.4868223482635652,
+                        0.49673836140589445,
+                        0.48971807393231903
+                    ],
+                    "mean": [
+                        0.75,
+                        0.6929824561403509,
+                        0.5921052631578947,
+                        0.6798245614035088,
+                        0.6140350877192983,
+                        0.5570175438596491,
+                        0.6008771929824561
+                    ],
+                    "var": [
+                        0.1875,
+                        0.21275777162203754,
+                        0.24151662049861497,
+                        0.21766312711603575,
+                        0.23699599876885197,
+                        0.24674899969221298,
+                        0.2398237919359803
+                    ],
+                    "n_samples_seen": 228,
+                    "n_features_in": 7,
+                    "columns": [
+                        "POLYURIA",
+                        "POLYDIPSIA",
+                        "SUDDEN_WEIGHT_LOSS",
+                        "WEAKNESS",
+                        "POLYPHAGIA",
+                        "VISUAL_BLURRING",
+                        "PARTIAL_PARESIS"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "POLYURIA": [
+                        "scale_normal"
+                    ],
+                    "POLYDIPSIA": [
+                        "scale_normal"
+                    ],
+                    "SUDDEN_WEIGHT_LOSS": [
+                        "scale_normal"
+                    ],
+                    "WEAKNESS": [
+                        "scale_normal"
+                    ],
+                    "POLYPHAGIA": [
+                        "scale_normal"
+                    ],
+                    "VISUAL_BLURRING": [
+                        "scale_normal"
+                    ],
+                    "PARTIAL_PARESIS": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.0.1",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "30397f2a-c92d-4db6-8a4b-4e5163dfde05",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "POLYURIA": [
+                    "scale_normal"
+                ],
+                "POLYDIPSIA": [
+                    "scale_normal"
+                ],
+                "SUDDEN_WEIGHT_LOSS": [
+                    "scale_normal"
+                ],
+                "WEAKNESS": [
+                    "scale_normal"
+                ],
+                "POLYPHAGIA": [
+                    "scale_normal"
+                ],
+                "VISUAL_BLURRING": [
+                    "scale_normal"
+                ],
+                "PARTIAL_PARESIS": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_5\\X.data",
+            "y_path": "AutoML_5\\y.data",
+            "results_path": "AutoML_5"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 60
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "accuracy",
+    "final_loss": -0.9473684210526315,
+    "train_time": 2.7377805709838867,
+    "is_stacked": false,
+    "threshold": 0.5609363966046405
+}

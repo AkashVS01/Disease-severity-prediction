@@ -1,0 +1,9 @@
+feature,shap_importance
+Alkaline_Phosphotase,0.3475208838845203
+AGE,0.014876963740600097
+Alamine_Aminotransferase,0.005825230825230813
+Total_Bilirubin,0.004931067431067437
+GENDER,0.0
+Direct_Bilirubin,0.0
+Total_Protiens,0.0
+Albumin,0.0

@@ -1,0 +1,49 @@
+{
+    "columns": [
+        "AGE",
+        "GENDER",
+        "HEIGHT",
+        "WEIGHT",
+        "AP_HIGH",
+        "AP_LOW",
+        "CHOLESTEROL",
+        "GLUCOSE",
+        "SMOKE",
+        "ALCOHOL"
+    ],
+    "rows": 30636,
+    "cols": 10,
+    "target_is_numeric": true,
+    "columns_info": {
+        "AGE": [
+            "scale"
+        ],
+        "GENDER": [
+            "scale"
+        ],
+        "HEIGHT": [
+            "scale"
+        ],
+        "WEIGHT": [
+            "scale"
+        ],
+        "AP_HIGH": [
+            "scale"
+        ],
+        "AP_LOW": [
+            "scale"
+        ],
+        "CHOLESTEROL": [
+            "scale"
+        ],
+        "GLUCOSE": [
+            "scale"
+        ],
+        "SMOKE": [],
+        "ALCOHOL": []
+    },
+    "target_info": [],
+    "n_features": 10,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

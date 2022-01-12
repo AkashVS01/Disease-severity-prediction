@@ -1,0 +1,53 @@
+{
+    "columns": [
+        "AGE",
+        "GENDER",
+        "TOTAL_BILIRUBIN",
+        "DIRECT_BILIRUBIN",
+        "ALKALINE_PHOSPHOTASE",
+        "ALAMINE_AMINOTRANSFERASE",
+        "ASPARTATE_AMINOTRANSFERASE",
+        "TOTAL_PROTEINS",
+        "ALBUMIN",
+        "ALBUMIN_AND_GLOBULIN_RATIO"
+    ],
+    "rows": 393,
+    "cols": 10,
+    "target_is_numeric": true,
+    "columns_info": {
+        "AGE": [
+            "scale"
+        ],
+        "GENDER": [
+            "scale"
+        ],
+        "TOTAL_BILIRUBIN": [
+            "scale"
+        ],
+        "DIRECT_BILIRUBIN": [
+            "scale"
+        ],
+        "ALKALINE_PHOSPHOTASE": [
+            "scale"
+        ],
+        "ALAMINE_AMINOTRANSFERASE": [
+            "scale"
+        ],
+        "ASPARTATE_AMINOTRANSFERASE": [
+            "scale"
+        ],
+        "TOTAL_PROTEINS": [
+            "scale"
+        ],
+        "ALBUMIN": [
+            "scale"
+        ],
+        "ALBUMIN_AND_GLOBULIN_RATIO": [
+            "scale"
+        ]
+    },
+    "target_info": [],
+    "n_features": 10,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

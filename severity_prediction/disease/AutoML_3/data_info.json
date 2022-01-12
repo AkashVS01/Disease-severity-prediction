@@ -1,0 +1,39 @@
+{
+    "columns": [
+        "COUGH",
+        "MUSCLE_ACHES",
+        "TIREDNESS",
+        "SORE_THROAT",
+        "RUNNY_NOSE",
+        "LOSS_OF_TASTE",
+        "LOSS_OF_SMELL",
+        "SNEEZING",
+        "PINK_EYE"
+    ],
+    "rows": 14742,
+    "cols": 9,
+    "target_is_numeric": true,
+    "columns_info": {
+        "COUGH": [],
+        "MUSCLE_ACHES": [
+            "scale"
+        ],
+        "TIREDNESS": [],
+        "SORE_THROAT": [
+            "scale"
+        ],
+        "RUNNY_NOSE": [],
+        "LOSS_OF_TASTE": [
+            "scale"
+        ],
+        "LOSS_OF_SMELL": [],
+        "SNEEZING": [
+            "scale"
+        ],
+        "PINK_EYE": []
+    },
+    "target_info": [],
+    "n_features": 9,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

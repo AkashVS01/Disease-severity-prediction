@@ -1,0 +1,43 @@
+{
+    "columns": [
+        "AGE",
+        "GENDER",
+        "Total_Bilirubin",
+        "Direct_Bilirubin",
+        "Alkaline_Phosphotase",
+        "Alamine_Aminotransferase",
+        "Total_Protiens",
+        "Albumin"
+    ],
+    "rows": 395,
+    "cols": 8,
+    "target_is_numeric": true,
+    "columns_info": {
+        "AGE": [
+            "scale"
+        ],
+        "GENDER": [],
+        "Total_Bilirubin": [
+            "scale"
+        ],
+        "Direct_Bilirubin": [
+            "scale"
+        ],
+        "Alkaline_Phosphotase": [
+            "scale"
+        ],
+        "Alamine_Aminotransferase": [
+            "scale"
+        ],
+        "Total_Protiens": [
+            "scale"
+        ],
+        "Albumin": [
+            "scale"
+        ]
+    },
+    "target_info": [],
+    "n_features": 8,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

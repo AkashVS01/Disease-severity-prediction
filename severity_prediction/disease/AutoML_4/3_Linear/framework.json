@@ -1,0 +1,117 @@
+{
+    "uid": "c6b003e7-1f7a-429d-88b6-da9de2fc942d",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        0.4999430760478631,
+                        0.4999957662101229
+                    ],
+                    "mean": [
+                        0.4924554183813443,
+                        0.5020576131687243
+                    ],
+                    "var": [
+                        0.24994307928819942,
+                        0.2499957662280479
+                    ],
+                    "n_samples_seen": 729,
+                    "n_features_in": 2,
+                    "columns": [
+                        "MUSCLE_ACHES",
+                        "SNEEZING"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "MUSCLE_ACHES": [
+                        "scale_normal"
+                    ],
+                    "SNEEZING": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.0.1",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "a5c96765-656d-480f-9d33-dd6b6d3673ec",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "MUSCLE_ACHES": [
+                    "scale_normal"
+                ],
+                "SNEEZING": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_4\\X.data",
+            "y_path": "AutoML_4\\y.data",
+            "results_path": "AutoML_4"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 60
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "accuracy",
+    "final_loss": -1.0,
+    "train_time": 2.6740102767944336,
+    "is_stacked": false,
+    "threshold": 0.49760015837391736
+}

@@ -1,0 +1,167 @@
+{
+    "uid": "4e051bbf-ec3d-40b5-95b6-117e13530e9f",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        15.388572106572521,
+                        7.363464463623691,
+                        3.0639917693189624,
+                        276.8427176724187,
+                        163.0155276662863,
+                        1.1118829388246676,
+                        0.792024191051702
+                    ],
+                    "mean": [
+                        46.3277027027027,
+                        4.080743243243243,
+                        1.7817567567567567,
+                        323.5912162162162,
+                        86.04391891891892,
+                        6.474662162162162,
+                        3.068243243243243
+                    ],
+                    "var": [
+                        236.80815147918184,
+                        54.220608907048934,
+                        9.388045562454346,
+                        76641.89032825053,
+                        26574.062260317747,
+                        1.2362836696493793,
+                        0.6273023192111029
+                    ],
+                    "n_samples_seen": 296,
+                    "n_features_in": 7,
+                    "columns": [
+                        "AGE",
+                        "Total_Bilirubin",
+                        "Direct_Bilirubin",
+                        "Alkaline_Phosphotase",
+                        "Alamine_Aminotransferase",
+                        "Total_Protiens",
+                        "Albumin"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "AGE": [
+                        "scale_normal"
+                    ],
+                    "Total_Bilirubin": [
+                        "scale_normal"
+                    ],
+                    "Direct_Bilirubin": [
+                        "scale_normal"
+                    ],
+                    "Alkaline_Phosphotase": [
+                        "scale_normal"
+                    ],
+                    "Alamine_Aminotransferase": [
+                        "scale_normal"
+                    ],
+                    "Total_Protiens": [
+                        "scale_normal"
+                    ],
+                    "Albumin": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.0.1",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "ff079a90-a4e4-4e90-bf6a-74ebb889a09d",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "AGE": [
+                    "scale_normal"
+                ],
+                "Total_Bilirubin": [
+                    "scale_normal"
+                ],
+                "Direct_Bilirubin": [
+                    "scale_normal"
+                ],
+                "Alkaline_Phosphotase": [
+                    "scale_normal"
+                ],
+                "Alamine_Aminotransferase": [
+                    "scale_normal"
+                ],
+                "Total_Protiens": [
+                    "scale_normal"
+                ],
+                "Albumin": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_2\\X.data",
+            "y_path": "AutoML_2\\y.data",
+            "results_path": "AutoML_2"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 60
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "accuracy",
+    "final_loss": -0.9696969696969697,
+    "train_time": 3.8735342025756836,
+    "is_stacked": false,
+    "threshold": 0.21268054804084152
+}

@@ -1,0 +1,696 @@
+<!doctype html>
+<html>
+<head>
+  <title>Disease prediction</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  
+  
+  <style>
+        body{
+          padding: 2%;
+        }
+        .web{
+          background: #2ec194;
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+        .cardio{
+          background-color: #33ccff;
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+
+        .q{
+          display: flex;
+          margin: auto;
+          width: 100%;
+          border-radius: 50px;
+        }
+        .Data{
+          padding-top: 5%;
+          padding-left: 10%;	
+        }
+        .personal{
+          float: left;
+          padding-bottom: 5%;
+        }
+        .Dis{
+          padding: 5%;
+        }
+        .symptoms{
+          padding-top: 5%;
+          padding-left: 20%;
+          
+        }
+        .next{
+          padding-top: 10%;
+        }
+
+        .bac{
+          background-color: azure;
+          padding: 5%;
+        }
+
+        .SYMP{
+          padding-top: 5%;
+        }
+
+        .cen{
+          padding: 15px;
+          margin: auto;
+          width: 100%;
+          border-radius: 50px;
+          color: white;
+          box-shadow: -30px 30px 20px rgba(0,0,0,0.3);
+          text-align: center;
+          background: linear-gradient(to left, #33ccff 0%, #ff99cc 100%);
+        }
+        #right{
+          padding-top: 5%;
+          width: 35.3%;
+          float: right;
+          height: 400px;
+        }
+        #left{
+          padding-top: 5%;
+          width: 26.3%;
+          float: left;
+          height: 400px;
+        }
+        #middle{
+          padding-top: 5%;
+          height: 400px;
+          width: 33.3%;
+          display: flow-root;
+          padding-left: 8%;
+
+        }
+  </style>
+
+</head>
+  
+<body class="web">
+    <div class="q">
+        <div class="cen">
+          <h1>MULTIPLE DISEASE RISK ASSESMENT SYSTEM</h1>
+        </div>
+    </div>
+        <div id="left">
+            <div class="disease">
+        <ul class="list-group">
+          <li class="list-group-item active"><h4>Disease that will be predicted:</h4></li>
+          <li class="list-group-item">CARDIOVASCULAR</li>
+          <li class="list-group-item">DIABETES</li>
+          <li class="list-group-item">JAUNDICE</li>
+          <li class="list-group-item">HEPATITIS</li>
+          <li class="list-group-item">THYROID</li>
+          <li class="list-group-item">ALLERGY</li>
+          <li class="list-group-item">COMMON COLD</li>
+        </ul>
+      </div>
+        </div>
+        
+   <div id="right">
+           
+    <form class="SYMP">
+
+      {% csrf_token %}
+    	
+      <h3 style="text-align: center;">ENTER THE SYMPTOMS :</h3>
+    
+          <div class="input-group mb-3">
+              
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Symptom1 :</label>
+            </div>
+              
+            <select class="custom-select" id="symptom1">
+                <option selected>Choose...</option>
+                <option value="sym1">itching</option>
+                <option value="sym1">continuous_sneezing</option>
+                <option value="sym1">shivering</option>
+                <option value="sym1">chills</option>
+                <option value="sym1">vomiting</option>
+                <option value="sym1">fatigue</option>
+                <option value="sym1">weight_gain</option>
+                <option value="sym1">cold_hands_and_feets</option>
+                <option value="sym1">mood_swings</option>
+                <option value="sym1">weight_loss</option>
+                <option value="sym1">restlessness</option>
+                <option value="sym1">lethargy</option>                
+                <option value="sym1">irregular_sugar_level</option>
+                <option value="sym1">cough</option>
+                <option value="sym1">high_fever</option>                
+                <option value="sym1">breathlessness</option>
+                <option value="sym1">sweating</option>                
+                <option value="sym1">headache</option>
+                <option value="sym1">yellowish_skin</option>
+                <option value="sym1">dark_urine</option>
+                <option value="sym1">nausea</option>
+                <option value="sym1">loss_of_appetite</option>                
+                <option value="sym1">abdominal_pain</option>                
+                <option value="sym1">yellowing_of_eyes</option>         
+                <option value="sym1">swelled_lymph_nodes</option>
+                <option value="sym1">malaise</option>
+                <option value="sym1">blurred_and_distorted_vision</option>
+                <option value="sym1">phlegm</option>
+                <option value="sym1">throat_irritation</option>
+                <option value="sym1">redness_of_eyes</option>
+                <option value="sym1">sinus_pressure</option>
+                <option value="sym1">runny_nose</option>
+                <option value="sym1">congestion</option>
+                <option value="sym1">chest_pain</option>                
+                <option value="sym1">dizziness</option>                
+                <option value="sym1">obesity</option>                
+                <option value="sym1">puffy_face_and_eyes</option>
+                <option value="sym1">enlarged_thyroid</option>
+                <option value="sym1">brittle_nails</option>
+                <option value="sym1">swollen_extremeties</option>
+                <option value="sym1">excessive_hunger</option>                
+                <option value="sym1">loss_of_smell</option>                
+                <option value="sym1">depression</option>
+                <option value="sym1">irritability</option>
+                <option value="sym1">muscle_pain</option>                
+                <option value="sym1">abnormal_menstruation</option>                
+                <option value="sym1">watering_from_eyes</option>
+                <option value="sym1">increased_appetite</option>
+                <option value="sym1">polyuria</option>
+                <option value="sym1">family_history</option>                
+              </select>
+          </div>
+          
+          <div class="input-group mb-3">
+              
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Symptom2 :</label>
+              </div>
+              
+              <select class="custom-select" id="symptom2">
+                <option selected>Choose...</option>
+                <option value="sym1">itching</option>
+                <option value="sym1">continuous_sneezing</option>
+                <option value="sym1">shivering</option>
+                <option value="sym1">chills</option>
+                <option value="sym1">vomiting</option>
+                <option value="sym1">fatigue</option>
+                <option value="sym1">weight_gain</option>
+                <option value="sym1">cold_hands_and_feets</option>
+                <option value="sym1">mood_swings</option>
+                <option value="sym1">weight_loss</option>
+                <option value="sym1">restlessness</option>
+                <option value="sym1">lethargy</option>                
+                <option value="sym1">irregular_sugar_level</option>
+                <option value="sym1">cough</option>
+                <option value="sym1">high_fever</option>                
+                <option value="sym1">breathlessness</option>
+                <option value="sym1">sweating</option>                
+                <option value="sym1">headache</option>
+                <option value="sym1">yellowish_skin</option>
+                <option value="sym1">dark_urine</option>
+                <option value="sym1">nausea</option>
+                <option value="sym1">loss_of_appetite</option>                
+                <option value="sym1">abdominal_pain</option>                
+                <option value="sym1">yellowing_of_eyes</option>         
+                <option value="sym1">swelled_lymph_nodes</option>
+                <option value="sym1">malaise</option>
+                <option value="sym1">blurred_and_distorted_vision</option>
+                <option value="sym1">phlegm</option>
+                <option value="sym1">throat_irritation</option>
+                <option value="sym1">redness_of_eyes</option>
+                <option value="sym1">sinus_pressure</option>
+                <option value="sym1">runny_nose</option>
+                <option value="sym1">congestion</option>
+                <option value="sym1">chest_pain</option>                
+                <option value="sym1">dizziness</option>                
+                <option value="sym1">obesity</option>                
+                <option value="sym1">puffy_face_and_eyes</option>
+                <option value="sym1">enlarged_thyroid</option>
+                <option value="sym1">brittle_nails</option>
+                <option value="sym1">swollen_extremeties</option>
+                <option value="sym1">excessive_hunger</option>                
+                <option value="sym1">loss_of_smell</option>                
+                <option value="sym1">depression</option>
+                <option value="sym1">irritability</option>
+                <option value="sym1">muscle_pain</option>                
+                <option value="sym1">abnormal_menstruation</option>                
+                <option value="sym1">watering_from_eyes</option>
+                <option value="sym1">increased_appetite</option>
+                <option value="sym1">polyuria</option>
+                <option value="sym1">family_history</option> 
+              </select>
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Symptom3 :</label>
+              </div>
+              <select class="custom-select" id="symptom3">
+                <option selected>Choose...</option>
+                <option value="sym1">itching</option>
+                <option value="sym1">continuous_sneezing</option>
+                <option value="sym1">shivering</option>
+                <option value="sym1">chills</option>
+                <option value="sym1">vomiting</option>
+                <option value="sym1">fatigue</option>
+                <option value="sym1">weight_gain</option>
+                <option value="sym1">cold_hands_and_feets</option>
+                <option value="sym1">mood_swings</option>
+                <option value="sym1">weight_loss</option>
+                <option value="sym1">restlessness</option>
+                <option value="sym1">lethargy</option>                
+                <option value="sym1">irregular_sugar_level</option>
+                <option value="sym1">cough</option>
+                <option value="sym1">high_fever</option>                
+                <option value="sym1">breathlessness</option>
+                <option value="sym1">sweating</option>                
+                <option value="sym1">headache</option>
+                <option value="sym1">yellowish_skin</option>
+                <option value="sym1">dark_urine</option>
+                <option value="sym1">nausea</option>
+                <option value="sym1">loss_of_appetite</option>                
+                <option value="sym1">abdominal_pain</option>                
+                <option value="sym1">yellowing_of_eyes</option>         
+                <option value="sym1">swelled_lymph_nodes</option>
+                <option value="sym1">malaise</option>
+                <option value="sym1">blurred_and_distorted_vision</option>
+                <option value="sym1">phlegm</option>
+                <option value="sym1">throat_irritation</option>
+                <option value="sym1">redness_of_eyes</option>
+                <option value="sym1">sinus_pressure</option>
+                <option value="sym1">runny_nose</option>
+                <option value="sym1">congestion</option>
+                <option value="sym1">chest_pain</option>                
+                <option value="sym1">dizziness</option>                
+                <option value="sym1">obesity</option>                
+                <option value="sym1">puffy_face_and_eyes</option>
+                <option value="sym1">enlarged_thyroid</option>
+                <option value="sym1">brittle_nails</option>
+                <option value="sym1">swollen_extremeties</option>
+                <option value="sym1">excessive_hunger</option>                
+                <option value="sym1">loss_of_smell</option>                
+                <option value="sym1">depression</option>
+                <option value="sym1">irritability</option>
+                <option value="sym1">muscle_pain</option>                
+                <option value="sym1">abnormal_menstruation</option>                
+                <option value="sym1">watering_from_eyes</option>
+                <option value="sym1">increased_appetite</option>
+                <option value="sym1">polyuria</option>
+                <option value="sym1">family_history</option> 
+              </select>
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Symptom4 :</label>
+              </div>
+              <select class="custom-select" id="symptom4">
+                <option selected>Choose...</option>
+                <option value="sym1">itching</option>
+                <option value="sym1">continuous_sneezing</option>
+                <option value="sym1">shivering</option>
+                <option value="sym1">chills</option>
+                <option value="sym1">vomiting</option>
+                <option value="sym1">fatigue</option>
+                <option value="sym1">weight_gain</option>
+                <option value="sym1">cold_hands_and_feets</option>
+                <option value="sym1">mood_swings</option>
+                <option value="sym1">weight_loss</option>
+                <option value="sym1">restlessness</option>
+                <option value="sym1">lethargy</option>                
+                <option value="sym1">irregular_sugar_level</option>
+                <option value="sym1">cough</option>
+                <option value="sym1">high_fever</option>                
+                <option value="sym1">breathlessness</option>
+                <option value="sym1">sweating</option>                
+                <option value="sym1">headache</option>
+                <option value="sym1">yellowish_skin</option>
+                <option value="sym1">dark_urine</option>
+                <option value="sym1">nausea</option>
+                <option value="sym1">loss_of_appetite</option>                
+                <option value="sym1">abdominal_pain</option>                
+                <option value="sym1">yellowing_of_eyes</option>         
+                <option value="sym1">swelled_lymph_nodes</option>
+                <option value="sym1">malaise</option>
+                <option value="sym1">blurred_and_distorted_vision</option>
+                <option value="sym1">phlegm</option>
+                <option value="sym1">throat_irritation</option>
+                <option value="sym1">redness_of_eyes</option>
+                <option value="sym1">sinus_pressure</option>
+                <option value="sym1">runny_nose</option>
+                <option value="sym1">congestion</option>
+                <option value="sym1">chest_pain</option>                
+                <option value="sym1">dizziness</option>                
+                <option value="sym1">obesity</option>                
+                <option value="sym1">puffy_face_and_eyes</option>
+                <option value="sym1">enlarged_thyroid</option>
+                <option value="sym1">brittle_nails</option>
+                <option value="sym1">swollen_extremeties</option>
+                <option value="sym1">excessive_hunger</option>                
+                <option value="sym1">loss_of_smell</option>                
+                <option value="sym1">depression</option>
+                <option value="sym1">irritability</option>
+                <option value="sym1">muscle_pain</option>                
+                <option value="sym1">abnormal_menstruation</option>                
+                <option value="sym1">watering_from_eyes</option>
+                <option value="sym1">increased_appetite</option>
+                <option value="sym1">polyuria</option>
+                <option value="sym1">family_history</option> 
+              </select>
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Symptom5 :</label>
+              </div>
+              <select class="custom-select" id="symptom5">
+                <option selected>Choose...</option>
+                <option value="sym1">itching</option>
+                <option value="sym1">continuous_sneezing</option>
+                <option value="sym1">shivering</option>
+                <option value="sym1">chills</option>
+                <option value="sym1">vomiting</option>
+                <option value="sym1">fatigue</option>
+                <option value="sym1">weight_gain</option>
+                <option value="sym1">cold_hands_and_feets</option>
+                <option value="sym1">mood_swings</option>
+                <option value="sym1">weight_loss</option>
+                <option value="sym1">restlessness</option>
+                <option value="sym1">lethargy</option>                
+                <option value="sym1">irregular_sugar_level</option>
+                <option value="sym1">cough</option>
+                <option value="sym1">high_fever</option>                
+                <option value="sym1">breathlessness</option>
+                <option value="sym1">sweating</option>                
+                <option value="sym1">headache</option>
+                <option value="sym1">yellowish_skin</option>
+                <option value="sym1">dark_urine</option>
+                <option value="sym1">nausea</option>
+                <option value="sym1">loss_of_appetite</option>                
+                <option value="sym1">abdominal_pain</option>                
+                <option value="sym1">yellowing_of_eyes</option>         
+                <option value="sym1">swelled_lymph_nodes</option>
+                <option value="sym1">malaise</option>
+                <option value="sym1">blurred_and_distorted_vision</option>
+                <option value="sym1">phlegm</option>
+                <option value="sym1">throat_irritation</option>
+                <option value="sym1">redness_of_eyes</option>
+                <option value="sym1">sinus_pressure</option>
+                <option value="sym1">runny_nose</option>
+                <option value="sym1">congestion</option>
+                <option value="sym1">chest_pain</option>                
+                <option value="sym1">dizziness</option>                
+                <option value="sym1">obesity</option>                
+                <option value="sym1">puffy_face_and_eyes</option>
+                <option value="sym1">enlarged_thyroid</option>
+                <option value="sym1">brittle_nails</option>
+                <option value="sym1">swollen_extremeties</option>
+                <option value="sym1">excessive_hunger</option>                
+                <option value="sym1">loss_of_smell</option>                
+                <option value="sym1">depression</option>
+                <option value="sym1">irritability</option>
+                <option value="sym1">muscle_pain</option>                
+                <option value="sym1">abnormal_menstruation</option>                
+                <option value="sym1">watering_from_eyes</option>
+                <option value="sym1">increased_appetite</option>
+                <option value="sym1">polyuria</option>
+                <option value="sym1">family_history</option> 
+              </select>
+          </div>
+    
+    </form>
+  
+    <div class="text-center">
+      <button id="predict" class="btn btn-primary">PREDICT DISEASE</button>
+    </div>
+ 
+    <br> 
+    
+    <h6 style="text-align: center">Disease Predicted : <h6>
+    <span style="color: red;margin-left: 4.4cm;" id="diseasepredicted"></span>
+      
+    
+    <br><br>
+    
+      <div class="text-center">
+        <a class="btn btn-primary" href="/cardio_severity" role="button" id = "htmlfile">CALCULATE SEVERITY</a>
+      </div>
+  
+  </div>
+        <div id="middle">
+          <div class="inside">
+          <div class="bac">
+              <form >
+                <ul class="list-group">
+                  <li class="list-group-item active"><h4>Enter your Personal Data:</h4></li>
+                  </ul>
+                  <br>
+                <div class="form-group">
+                  <label for="name"><h5>NAME</h5></label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your Name">
+                </div>
+                <div class="form-group">
+                  <label for="age"><h5>AGE</h5></label>
+                  <input type="text" class="form-control" id="age" placeholder="Enter your Age">
+                </div>
+                <label for="sex"><h5>SEX:</h5></label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Gender:</label>
+                  </div>
+                  <select class="custom-select" id="sex">
+                    <option selected>Choose...</option>
+                    <option value="0">MALE</option>
+                    <option value="1">FEMALE</option>
+                    
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="weight"><h5>WEIGHT</h5></label>
+                  <input type="text" class="form-control" id="weight" placeholder="Enter your Weight">
+                </div>
+              </form>
+           
+              <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+
+              <br><br>
+    
+              <h6 id="confirmation"></h6>
+
+              
+          
+            </div>
+          </div>
+        
+      </div>
+        </div>
+        </form>
+
+
+
+
+        <script type="text/javascript">
+
+          
+
+          $(document).ready(function(){
+
+              var csrf = $("input[name=csrfmiddlewaretoken]").val();
+
+              $("#predict").click(function(){
+
+                var select1 = document.getElementById("symptom1");
+                var symp1=select1.options[select1.selectedIndex].innerHTML;
+                      
+                var select2 = document.getElementById("symptom2");
+                var symp2=select2.options[select2.selectedIndex].innerHTML;
+
+                var select3 = document.getElementById("symptom3");
+                var symp3=select3.options[select3.selectedIndex].innerHTML;
+
+                var select4 = document.getElementById("symptom4");
+                var symp4=select4.options[select4.selectedIndex].innerHTML;
+
+                var select5 = document.getElementById("symptom5");
+                var symp5=select5.options[select5.selectedIndex].innerHTML;
+
+                console.log(symp1);
+
+                $.ajax({
+
+                    url:'/find_disease/',
+                    type:'POST',
+                    data: {
+                        symptom1: symp1,
+                        symptom2: symp2,
+                        symptom3: symp3,
+                        symptom4: symp4,
+                        symptom5: symp5
+                    },
+                    success : function(response){
+                      document.getElementById("diseasepredicted").innerHTML = response.restext;
+                      document.getElementById("htmlfile").href = response.name;
+                     
+
+                    }
+                });
+
+              });
+
+
+              $("#submit").click(function(){
+
+                var Name=document.querySelector("#name").value;
+                var Age=document.querySelector("#age").value;
+                var Weight=document.querySelector("#weight").value;
+                var select = document.getElementById("sex");
+                var Gender=select.options[select.selectedIndex].value;
+
+                $.ajax({
+
+                        url:'/store_data/',
+                        type:'POST',
+                        data: {
+                            name_val: Name,
+                            age_val: Age,
+                            weight_val: Weight,
+                            gender_val: Gender
+                            
+                        },
+                        success : function(response){
+                          document.getElementById("confirmation").innerHTML = response.restext;
+                          
+                        }
+                      });
+
+                });
+              
+          
+          });
+          
+          
+
+              function personal(){
+                var Name=document.querySelector("#name").value;
+                var Age=document.querySelector("#age").value;
+                var Weight=document.querySelector("#weight").value;
+                var select = document.getElementById("sex");
+                var Gender=select.options[select.selectedIndex].innerHTML;
+              }
+        </script>
+
+
+      
+       <!---- <script type="text/javascript">
+          
+          document.querySelector("#predict").addEventListener("click",symptoms);
+          document.querySelector("#submit").addEventListener("click",personal);
+          
+          function symptoms()
+          {
+                var select1 = document.getElementById("symptom1");
+                var symp1=select1.options[select1.selectedIndex].innerHTML;
+                
+
+                var select2 = document.getElementById("symptom2");
+                var symp2=select2.options[select2.selectedIndex].innerHTML;
+
+                var select3 = document.getElementById("symptom3");
+                var symp3=select3.options[select3.selectedIndex].innerHTML;
+
+                var select4 = document.getElementById("symptom4");
+                var symp4=select4.options[select4.selectedIndex].innerHTML;
+
+                var select5 = document.getElementById("symptom5");
+                var symp5=select5.options[select5.selectedIndex].innerHTML;
+
+                document.getElementById(diseasepredicted).style.visibility = "visible";
+
+                $.ajax({
+                      url: '',
+                      type: 'POST', 
+                      data: {'symptom1':symp1,'symptom2':symp2,'symptom3':symp3,'symptom4':symp4,'symptom5':symp5},
+                      success : function(response) {
+                         document.getElementById("diseasepredicted").style.visibility = "visible";
+                      }
+                 }); 
+
+                
+          }*/
+
+
+          var select1 = document.getElementById("symptom1");
+          var symp1=select1.options[select1.selectedIndex].innerHTML;
+                
+          var select2 = document.getElementById("symptom2");
+          var symp2=select2.options[select2.selectedIndex].innerHTML;
+
+          var select3 = document.getElementById("symptom3");
+          var symp3=select3.options[select3.selectedIndex].innerHTML;
+
+          var select4 = document.getElementById("symptom4");
+          var symp4=select4.options[select4.selectedIndex].innerHTML;
+
+          var select5 = document.getElementById("symptom5");
+          var symp5=select5.options[select5.selectedIndex].innerHTML;
+
+          console.log(symp1);
+
+          $(document).ready(function(){
+
+              var csrf = $("input[name=csrfmiddlewaretoken]").val();
+
+              $("#predict").click(function(){
+
+                $.ajax({
+
+                    url:'',
+                    type:'get',
+                    data: {
+                        symptom1: symp1,
+                        symptom2: symp2,
+                        symptom3: symp3,
+                        symptom4: symp4,
+                        symptom5: symp5
+                    },
+                    success : function(response){
+                      document.getElementById("diseasepredicted").innerHTML = response.restext;
+                    }
+                });
+
+              });
+              
+          
+          });
+          
+          
+
+              function personal(){
+                var Name=document.querySelector("#name").value;
+                var Age=document.querySelector("#age").value;
+                var Weight=document.querySelector("#weight").value;
+                var select = document.getElementById("sex");
+                var Gender=select.options[select.selectedIndex].innerHTML;
+              }
+
+        </script>-->
+
+
+
+    
+
+
+    <!---
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    -->
+    
+
+    </body>
+</html>

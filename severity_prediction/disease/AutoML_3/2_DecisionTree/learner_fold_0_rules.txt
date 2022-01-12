@@ -1,0 +1,16 @@
+if (SORE_THROAT <= 0.5) and (LOSS_OF_TASTE <= 0.5) and (PINK_EYE > 0.5) then class: 0 (proba: 89.71%) | based on 1,399 samples
+
+if (SORE_THROAT <= 0.5) and (LOSS_OF_TASTE > 0.5) and (SNEEZING > 0.5) then class: 0 (proba: 65.88%) | based on 1,398 samples
+
+if (SORE_THROAT <= 0.5) and (LOSS_OF_TASTE <= 0.5) and (PINK_EYE <= 0.5) then class: 0 (proba: 98.85%) | based on 1,392 samples
+
+if (SORE_THROAT > 0.5) and (TIREDNESS > 0.5) and (SNEEZING > 0.5) then class: 1 (proba: 67.17%) | based on 1,386 samples
+
+if (SORE_THROAT > 0.5) and (TIREDNESS <= 0.5) and (COUGH <= 0.5) then class: 0 (proba: 90.05%) | based on 1,377 samples
+
+if (SORE_THROAT > 0.5) and (TIREDNESS > 0.5) and (SNEEZING <= 0.5) then class: 0 (proba: 65.13%) | based on 1,371 samples
+
+if (SORE_THROAT > 0.5) and (TIREDNESS <= 0.5) and (COUGH > 0.5) then class: 0 (proba: 64.67%) | based on 1,367 samples
+
+if (SORE_THROAT <= 0.5) and (LOSS_OF_TASTE > 0.5) and (SNEEZING <= 0.5) then class: 0 (proba: 89.9%) | based on 1,366 samples
+

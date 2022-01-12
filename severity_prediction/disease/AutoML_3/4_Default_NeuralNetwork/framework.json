@@ -1,0 +1,142 @@
+{
+    "uid": "abb54c8b-318d-4def-98d8-e23eec364711",
+    "name": "4_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        0.4999899782311626,
+                        0.49999403604911313,
+                        0.49999815928200747,
+                        0.4999967276077726
+                    ],
+                    "mean": [
+                        0.5031657018813314,
+                        0.4975578871201158,
+                        0.5013567293777135,
+                        0.501808972503618
+                    ],
+                    "var": [
+                        0.24998997833159844,
+                        0.24999403608468185,
+                        0.2499981592853957,
+                        0.24999672761848116
+                    ],
+                    "n_samples_seen": 11056,
+                    "n_features_in": 4,
+                    "columns": [
+                        "MUSCLE_ACHES",
+                        "SORE_THROAT",
+                        "LOSS_OF_TASTE",
+                        "SNEEZING"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "MUSCLE_ACHES": [
+                        "scale_normal"
+                    ],
+                    "SORE_THROAT": [
+                        "scale_normal"
+                    ],
+                    "LOSS_OF_TASTE": [
+                        "scale_normal"
+                    ],
+                    "SNEEZING": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.0.1",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "180901e3-1881-4b56-a995-44aada9dd552",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 4,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "MUSCLE_ACHES": [
+                    "scale_normal"
+                ],
+                "SORE_THROAT": [
+                    "scale_normal"
+                ],
+                "LOSS_OF_TASTE": [
+                    "scale_normal"
+                ],
+                "SNEEZING": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_3\\X.data",
+            "y_path": "AutoML_3\\y.data",
+            "results_path": "AutoML_3"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 4,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "4_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 60
+    },
+    "saved": [
+        "4_Default_NeuralNetwork\\learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "4_Default_NeuralNetwork\\predictions_validation.csv",
+    "metric_name": "accuracy",
+    "final_loss": -1.0,
+    "train_time": 3.2023210525512695,
+    "is_stacked": false,
+    "threshold": 0.4997036825669828
+}

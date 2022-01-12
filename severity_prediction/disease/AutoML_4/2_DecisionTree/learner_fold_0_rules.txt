@@ -1,0 +1,16 @@
+if (SNEEZING > 0.5) and (TIREDNESS > 0.5) and (SORE_THROAT <= 0.5) then class: 0 (proba: 64.65%) | based on 99 samples
+
+if (SNEEZING > 0.5) and (TIREDNESS > 0.5) and (SORE_THROAT > 0.5) then class: 1 (proba: 70.21%) | based on 94 samples
+
+if (SNEEZING <= 0.5) and (RUNNY_NOSE > 0.5) and (FEVER <= 0.5) then class: 0 (proba: 91.4%) | based on 93 samples
+
+if (SNEEZING <= 0.5) and (RUNNY_NOSE <= 0.5) and (LOSS_OF_SMELL <= 0.5) then class: 0 (proba: 100.0%) | based on 92 samples
+
+if (SNEEZING <= 0.5) and (RUNNY_NOSE <= 0.5) and (LOSS_OF_SMELL > 0.5) then class: 0 (proba: 91.21%) | based on 91 samples
+
+if (SNEEZING > 0.5) and (TIREDNESS <= 0.5) and (LOSS_OF_SMELL <= 0.5) then class: 0 (proba: 92.13%) | based on 89 samples
+
+if (SNEEZING <= 0.5) and (RUNNY_NOSE > 0.5) and (FEVER > 0.5) then class: 0 (proba: 66.67%) | based on 87 samples
+
+if (SNEEZING > 0.5) and (TIREDNESS <= 0.5) and (LOSS_OF_SMELL > 0.5) then class: 0 (proba: 64.29%) | based on 84 samples
+

@@ -1,0 +1,197 @@
+{
+    "uid": "33eb3097-c4cb-46d5-8af7-27416d96fdac",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        15.39474570093465,
+                        0.41947202203333017,
+                        7.813439407170313,
+                        3.3822640969598456,
+                        271.81765952919824,
+                        230.88807977463185,
+                        377.82060418930905,
+                        1.0872563767588643,
+                        0.7847581572414696,
+                        0.3300540222393478
+                    ],
+                    "mean": [
+                        46.51020408163265,
+                        0.7721088435374149,
+                        4.453401360544218,
+                        2.0493197278911564,
+                        318.98979591836735,
+                        101.36054421768708,
+                        143.60544217687075,
+                        6.45578231292517,
+                        3.057482993197279,
+                        0.9216666666666667
+                    ],
+                    "var": [
+                        236.9981951964459,
+                        0.17595677726873063,
+                        61.04983536952197,
+                        11.4397104215836,
+                        73884.84003193113,
+                        53309.30538201676,
+                        142748.40894997455,
+                        1.1821264288028137,
+                        0.6158453653570272,
+                        0.1089356575963719
+                    ],
+                    "n_samples_seen": 294,
+                    "n_features_in": 10,
+                    "columns": [
+                        "AGE",
+                        "GENDER",
+                        "TOTAL_BILIRUBIN",
+                        "DIRECT_BILIRUBIN",
+                        "ALKALINE_PHOSPHOTASE",
+                        "ALAMINE_AMINOTRANSFERASE",
+                        "ASPARTATE_AMINOTRANSFERASE",
+                        "TOTAL_PROTEINS",
+                        "ALBUMIN",
+                        "ALBUMIN_AND_GLOBULIN_RATIO"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "AGE": [
+                        "scale_normal"
+                    ],
+                    "GENDER": [
+                        "scale_normal"
+                    ],
+                    "TOTAL_BILIRUBIN": [
+                        "scale_normal"
+                    ],
+                    "DIRECT_BILIRUBIN": [
+                        "scale_normal"
+                    ],
+                    "ALKALINE_PHOSPHOTASE": [
+                        "scale_normal"
+                    ],
+                    "ALAMINE_AMINOTRANSFERASE": [
+                        "scale_normal"
+                    ],
+                    "ASPARTATE_AMINOTRANSFERASE": [
+                        "scale_normal"
+                    ],
+                    "TOTAL_PROTEINS": [
+                        "scale_normal"
+                    ],
+                    "ALBUMIN": [
+                        "scale_normal"
+                    ],
+                    "ALBUMIN_AND_GLOBULIN_RATIO": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.0.1",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "fcee3e89-ee4c-44c2-bba5-24de0bed267d",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "AGE": [
+                    "scale_normal"
+                ],
+                "GENDER": [
+                    "scale_normal"
+                ],
+                "TOTAL_BILIRUBIN": [
+                    "scale_normal"
+                ],
+                "DIRECT_BILIRUBIN": [
+                    "scale_normal"
+                ],
+                "ALKALINE_PHOSPHOTASE": [
+                    "scale_normal"
+                ],
+                "ALAMINE_AMINOTRANSFERASE": [
+                    "scale_normal"
+                ],
+                "ASPARTATE_AMINOTRANSFERASE": [
+                    "scale_normal"
+                ],
+                "TOTAL_PROTEINS": [
+                    "scale_normal"
+                ],
+                "ALBUMIN": [
+                    "scale_normal"
+                ],
+                "ALBUMIN_AND_GLOBULIN_RATIO": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_6\\X.data",
+            "y_path": "AutoML_6\\y.data",
+            "results_path": "AutoML_6"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 60
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "accuracy",
+    "final_loss": -0.9696969696969697,
+    "train_time": 3.0184245109558105,
+    "is_stacked": false,
+    "threshold": 0.30639745203414753
+}

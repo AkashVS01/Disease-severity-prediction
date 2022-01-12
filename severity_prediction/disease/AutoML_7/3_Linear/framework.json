@@ -1,0 +1,127 @@
+{
+    "uid": "f5ef6585-307e-4358-b5db-0a82aa67d68c",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        19.654607841535196,
+                        51.550176582957405,
+                        46.148551230623895
+                    ],
+                    "mean": [
+                        53.77717391304348,
+                        101.59565217391305,
+                        103.3643115942029
+                    ],
+                    "var": [
+                        386.30360940453687,
+                        2657.42070573409,
+                        2129.688780685518
+                    ],
+                    "n_samples_seen": 552,
+                    "n_features_in": 3,
+                    "columns": [
+                        "Age",
+                        "TT4",
+                        "FTI"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Age": [
+                        "scale_normal"
+                    ],
+                    "TT4": [
+                        "scale_normal"
+                    ],
+                    "FTI": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.0.1",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "94a30379-04ef-4ef6-9753-89c5e687d8d3",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Age": [
+                    "scale_normal"
+                ],
+                "TT4": [
+                    "scale_normal"
+                ],
+                "FTI": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_7\\X.data",
+            "y_path": "AutoML_7\\y.data",
+            "results_path": "AutoML_7"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 60
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "accuracy",
+    "final_loss": -1.0,
+    "train_time": 2.8185606002807617,
+    "is_stacked": false,
+    "threshold": 0.39509735082424347
+}

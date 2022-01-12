@@ -1,0 +1,12 @@
+if (ALKALINE_PHOSPHOTASE <= 312.0) and (ALKALINE_PHOSPHOTASE <= 306.5) then class: 0 (proba: 100.0%) | based on 213 samples
+
+if (ALKALINE_PHOSPHOTASE > 312.0) and (ALKALINE_PHOSPHOTASE > 341.0) then class: 1 (proba: 100.0%) | based on 67 samples
+
+if (ALKALINE_PHOSPHOTASE > 312.0) and (ALKALINE_PHOSPHOTASE <= 341.0) and (AGE > 46.5) then class: 1 (proba: 100.0%) | based on 6 samples
+
+if (ALKALINE_PHOSPHOTASE > 312.0) and (ALKALINE_PHOSPHOTASE <= 341.0) and (AGE <= 46.5) then class: 0 (proba: 100.0%) | based on 4 samples
+
+if (ALKALINE_PHOSPHOTASE <= 312.0) and (ALKALINE_PHOSPHOTASE > 306.5) and (ALKALINE_PHOSPHOTASE > 309.0) then class: 0 (proba: 100.0%) | based on 3 samples
+
+if (ALKALINE_PHOSPHOTASE <= 312.0) and (ALKALINE_PHOSPHOTASE > 306.5) and (ALKALINE_PHOSPHOTASE <= 309.0) then class: 1 (proba: 100.0%) | based on 1 samples
+

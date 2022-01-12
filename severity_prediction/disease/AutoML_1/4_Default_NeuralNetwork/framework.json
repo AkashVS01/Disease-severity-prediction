@@ -1,0 +1,182 @@
+{
+    "uid": "c949c250-3b90-429e-a0c3-95a30513297b",
+    "name": "4_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        6.370785315936986,
+                        0.47691550313881703,
+                        8.304791301847123,
+                        14.87328483404062,
+                        17.39084006658649,
+                        9.85307637292495,
+                        0.7779562925523884,
+                        0.627560117097424
+                    ],
+                    "mean": [
+                        54.94777386081734,
+                        1.3498280889585237,
+                        164.25081603342474,
+                        76.7526221874048,
+                        133.89976933455193,
+                        84.73151412281847,
+                        1.516429472951212,
+                        1.2794968881925404
+                    ],
+                    "var": [
+                        40.58690554175831,
+                        0.227448397134151,
+                        68.96955856723564,
+                        221.2146017545027,
+                        302.44131822159,
+                        97.08311401069187,
+                        0.6052159931218573,
+                        0.3938317005713325
+                    ],
+                    "n_samples_seen": 22977,
+                    "n_features_in": 8,
+                    "columns": [
+                        "AGE",
+                        "GENDER",
+                        "HEIGHT",
+                        "WEIGHT",
+                        "AP_HIGH",
+                        "AP_LOW",
+                        "CHOLESTEROL",
+                        "GLUCOSE"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "AGE": [
+                        "scale_normal"
+                    ],
+                    "GENDER": [
+                        "scale_normal"
+                    ],
+                    "HEIGHT": [
+                        "scale_normal"
+                    ],
+                    "WEIGHT": [
+                        "scale_normal"
+                    ],
+                    "AP_HIGH": [
+                        "scale_normal"
+                    ],
+                    "AP_LOW": [
+                        "scale_normal"
+                    ],
+                    "CHOLESTEROL": [
+                        "scale_normal"
+                    ],
+                    "GLUCOSE": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.0.1",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "842578f8-e0a6-4817-a010-ae0eeccdaf25",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 4,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "AGE": [
+                    "scale_normal"
+                ],
+                "GENDER": [
+                    "scale_normal"
+                ],
+                "HEIGHT": [
+                    "scale_normal"
+                ],
+                "WEIGHT": [
+                    "scale_normal"
+                ],
+                "AP_HIGH": [
+                    "scale_normal"
+                ],
+                "AP_LOW": [
+                    "scale_normal"
+                ],
+                "CHOLESTEROL": [
+                    "scale_normal"
+                ],
+                "GLUCOSE": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_1\\X.data",
+            "y_path": "AutoML_1\\y.data",
+            "results_path": "AutoML_1"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 4,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "4_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 60
+    },
+    "saved": [
+        "4_Default_NeuralNetwork\\learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "4_Default_NeuralNetwork\\predictions_validation.csv",
+    "metric_name": "accuracy",
+    "final_loss": -1.0,
+    "train_time": 13.26992678642273,
+    "is_stacked": false,
+    "threshold": 0.49999991887689405
+}

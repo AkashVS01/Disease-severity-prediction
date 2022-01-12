@@ -1,0 +1,16 @@
+if (POLYDIPSIA > 0.5) and (PARTIAL_PARESIS > 0.5) and (POLYPHAGIA > 0.5) then class: 1 (proba: 100.0%) | based on 88 samples
+
+if (POLYDIPSIA <= 0.5) and (DELAYED_HEALING <= 0.5) and (ITCHING <= 0.5) then class: 0 (proba: 100.0%) | based on 38 samples
+
+if (POLYDIPSIA > 0.5) and (PARTIAL_PARESIS <= 0.5) and (POLYPHAGIA <= 0.5) then class: 0 (proba: 92.59%) | based on 27 samples
+
+if (POLYDIPSIA > 0.5) and (PARTIAL_PARESIS <= 0.5) and (POLYPHAGIA > 0.5) then class: 1 (proba: 86.36%) | based on 22 samples
+
+if (POLYDIPSIA > 0.5) and (PARTIAL_PARESIS > 0.5) and (POLYPHAGIA <= 0.5) then class: 1 (proba: 95.24%) | based on 21 samples
+
+if (POLYDIPSIA <= 0.5) and (DELAYED_HEALING > 0.5) and (VISUAL_BLURRING <= 0.5) then class: 0 (proba: 78.57%) | based on 14 samples
+
+if (POLYDIPSIA <= 0.5) and (DELAYED_HEALING <= 0.5) and (ITCHING > 0.5) then class: 0 (proba: 83.33%) | based on 12 samples
+
+if (POLYDIPSIA <= 0.5) and (DELAYED_HEALING > 0.5) and (VISUAL_BLURRING > 0.5) then class: 1 (proba: 83.33%) | based on 6 samples
+
