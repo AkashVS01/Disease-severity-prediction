@@ -21,6 +21,10 @@ Following diseases will be predicted:
 AutoML is used to train models for predicting the severity (benign or malignant). Datasets are collected for each of the seven diseases.
 Severity feature is computed based on the feature importance. Separate model is trained for each of the seven diseases.
 
+AutoMl library used - mljar-supervised
+
+Link: https://mljar.com/automl/
+
 ## Datasets
 
 Datasets can be found in the repository.
